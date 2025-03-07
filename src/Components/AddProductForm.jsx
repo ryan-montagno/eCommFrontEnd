@@ -1,17 +1,21 @@
-
-
 import { useState } from "react";
 
 const AddProductForm = () => {
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [description, setDescription] = useState("");
-  const [tags, setTags] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  const [product_name, setName] = useState("");
+  const [product_price, setPrice] = useState("");
+  const [product_desc, setDescription] = useState("");
+  const [product_tag, setTags] = useState("");
+  const [image_url, setImageUrl] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const product = { name, price, description, tags, imageUrl };
+    const product = {
+      product_name,
+      product_desc,
+      product_price,
+      product_tag,
+      image_url,
+    };
 
     fetch("http://localhost:8080/api/products", {
       method: "POST",
@@ -44,7 +48,7 @@ const AddProductForm = () => {
         Product Name:
         <input
           type="text"
-          value={name}
+          value={product_name}
           onChange={(e) => setName(e.target.value)}
           className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
         />
@@ -53,7 +57,7 @@ const AddProductForm = () => {
         Price:
         <input
           type="number"
-          value={price}
+          value={product_price}
           onChange={(e) => setPrice(e.target.value)}
           className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
         />
@@ -61,7 +65,7 @@ const AddProductForm = () => {
       <label className="block">
         Description:
         <textarea
-          value={description}
+          value={product_desc}
           onChange={(e) => setDescription(e.target.value)}
           className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
         />
@@ -70,7 +74,7 @@ const AddProductForm = () => {
         Tags:
         <input
           type="text"
-          value={tags}
+          value={product_tag}
           onChange={(e) => setTags(e.target.value)}
           className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
         />
@@ -79,7 +83,7 @@ const AddProductForm = () => {
         Image URL:
         <input
           type="text"
-          value={imageUrl}
+          value={image_url}
           onChange={(e) => setImageUrl(e.target.value)}
           className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
         />
