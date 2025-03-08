@@ -1,4 +1,5 @@
 import React from "react";
+import TagMenu from "./TagMenu";
 
 const NavBar = () => {
   return (
@@ -15,6 +16,7 @@ const NavBar = () => {
           <a href="#" className="text-white hover:text-gray-300">
             Contact
           </a>
+          <TagMenu />
         </div>
       </div>
     </nav>
