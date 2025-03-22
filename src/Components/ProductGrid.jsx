@@ -20,7 +20,7 @@ const ProductGrid = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <div className="product-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+    <div className="product-grid grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 p-6">
       {data && data.length > 0 ? (
         data.map((product) => (
           <div
@@ -38,10 +38,10 @@ const ProductGrid = () => {
             {selectedProduct &&
             selectedProduct.product_id === product.product_id ? (
               <div className="p-4 flex flex-col items-start relative">
-                <h2 className="text-4xl font-semibold text-gray-600">
+                <h4 className="text-2xl font-semibold text-gray-600">
                   {product.product_name}
-                </h2>
-                <p className="text-md text-gray-300 mb-2">
+                </h4>
+                <p className="text-sm text-gray-300 mb-2">
                   {product.product_desc}
                 </p>
                 <p className="text-sm text-gray-400 mb-4">
@@ -51,7 +51,7 @@ const ProductGrid = () => {
                 <p className="text-xs text-gray-500">
                   Tag: {product.product_tag}
                 </p>
-                <p className="text-sm text-[#535bf2] font-bold absolute top-4 right-4">
+                <p className="text-sm text-[#535bf2] font-bold absolute bottom-4 right-4">
                   ${product.product_price}
                 </p>
               </div>

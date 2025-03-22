@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-const ProductTagGrid = ({ tagParam }) => {
+const ProductSearchGrid = ({ searchParam }) => {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/products/tag?tag=${tagParam}`) // Adjust to match your Spring Boot API
+    fetch(`http://localhost:8080/api/products/search?searchTerm=${searchParam}`) // Adjust to match your Spring Boot API
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -15,7 +15,7 @@ const ProductTagGrid = ({ tagParam }) => {
       .then((data) => setData(data))
       .then(console.log(data))
       .catch((error) => console.error("Error fetching data:", error));
-  }, [tagParam]);
+  }, [searchParam]);
 
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -71,4 +71,4 @@ const ProductTagGrid = ({ tagParam }) => {
   );
 };
 
-export default ProductTagGrid;
+export default ProductSearchGrid;
