@@ -1,6 +1,5 @@
 import NavBar from "../Components/NavBar.jsx";
 import ProductGrid from "../Components/ProductGrid.jsx";
-import SideBar from "../Components/SideBar.jsx";
 
 function Home() {
   return (

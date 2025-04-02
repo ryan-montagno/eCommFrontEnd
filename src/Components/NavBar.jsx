@@ -13,8 +13,8 @@ const NavBar = () => {
           <a href="/" className="text-white hover:text-gray-300">
             Home
           </a>
-          <a href="/addproduct" className="text-white hover:text-gray-300">
-            Add Product
+          <a href="/admin" className="text-white hover:text-gray-300">
+            Admin
           </a>
           <a href="#" className="text-white hover:text-gray-300">
             Contact
