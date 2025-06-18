@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-const EditProductForm = () => {
+const EditProductForm = (product) => {
+
+
   const [product_name, setName] = useState("");
   const [product_price, setPrice] = useState("");
   const [product_desc, setDescription] = useState("");
@@ -43,58 +45,7 @@ const EditProductForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-10">
-      <label className="block">
-        Product Name:
-        <input
-          type="text"
-          value={product_name}
-          onChange={(e) => setName(e.target.value)}
-          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
-        />
-      </label>
-      <label className="block">
-        Price:
-        <input
-          type="number"
-          value={product_price}
-          onChange={(e) => setPrice(e.target.value)}
-          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
-        />
-      </label>
-      <label className="block">
-        Description:
-        <textarea
-          value={product_desc}
-          onChange={(e) => setDescription(e.target.value)}
-          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
-        />
-      </label>
-      <label className="block">
-        Tags:
-        <input
-          type="text"
-          value={product_tag}
-          onChange={(e) => setTags(e.target.value)}
-          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
-        />
-      </label>
-      <label className="block">
-        Image URL:
-        <input
-          type="text"
-          value={image_url}
-          onChange={(e) => setImageUrl(e.target.value)}
-          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
-        />
-      </label>
-      <button
-        type="submit"
-        className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
-      >
-        Edit Product
-      </button>
-    </form>
+      <h1>{product.product_name}</h1>
   );
 };
 

@@ -6,6 +6,7 @@ import SearchView from "./Pages/SearchView.jsx";
 import Admin from "./Pages/Admin.jsx";
 import EditProduct from "./Pages/EditProduct.jsx";
 import DeleteProduct from "./Pages/DeleteProduct.jsx";
+import EditProductLookUpPage from "./Pages/EditProductLookUpPage.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/editproduct" element={<EditProduct />} />
           <Route path="/deleteproduct" element={<DeleteProduct />} />
         <Route path="/searchview/:searchParam" element={<SearchView />} />
+        <Route path="/editproductlookup" element={<EditProductLookUpPage />} />
       </Routes>
     </BrowserRouter>
   );

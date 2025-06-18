@@ -10,7 +10,7 @@ function Admin() {
                     <a href="/addproduct" className="text-white hover:text-gray-300">
                         <button className="w-32 h-32 bg-blue-500 text-white text-xl">Add a Product</button>
                     </a>
-                    <a href="/editproduct" className="text-white hover:text-gray-300">
+                    <a href="/editproductlookup" className="text-white hover:text-gray-300">
                         <button className="w-32 h-32 bg-blue-500 text-white text-xl">Edit a Product</button>
                     </a>
                     <a href="/deleteproduct" className="text-white hover:text-gray-300">
