@@ -2,7 +2,7 @@ import NavBar from "../Components/NavBar.jsx";
 import EditProductLookUp from "../Components/EditProductLookUp.jsx";
 
 
-function EditProduct() {
+function EditProductLookUpPage() {
     return (
         <>
             <NavBar />
@@ -11,4 +11,4 @@ function EditProduct() {
     );
 }
 
-export default EditProduct;
+export default EditProductLookUpPage;

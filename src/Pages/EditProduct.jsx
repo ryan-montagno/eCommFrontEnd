@@ -1,17 +1,17 @@
 import NavBar from "../Components/NavBar.jsx";
 import EditProductForm from "../Components/EditProductForm.jsx";
-import {useLocation} from "react-router-dom";
+import {useParams} from "react-router-dom";
 
 
 function EditProduct() {
 
-    const location = useLocation();
-    const product = location.state || {};
+    const { product_id } = useParams();
+
 
     return (
         <>
             <NavBar />
-            <EditProductForm product={product}/>
+            <EditProductForm  product_id={product_id} />
         </>
     );
 }

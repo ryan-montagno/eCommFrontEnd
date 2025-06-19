@@ -22,6 +22,7 @@ const DeleteProductForm = () => {
                 console.log("Product deleted successfully", data);
             })
             .catch((error) => console.error("Error deleting product:", error));
+        navigate('/');
     };
 
     return (

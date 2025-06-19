@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {useNavigate} from "react-router-dom";
 
 const AddProductForm = () => {
   const [product_name, setName] = useState("");
@@ -6,6 +7,7 @@ const AddProductForm = () => {
   const [product_desc, setDescription] = useState("");
   const [product_tag, setTags] = useState("");
   const [image_url, setImageUrl] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,6 +42,7 @@ const AddProductForm = () => {
         setImageUrl("");
       })
       .catch((error) => console.error("Error adding product:", error));
+      navigate('/');
   };
 
   return (

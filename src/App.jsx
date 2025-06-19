@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
           <Route path="/admin" element={<Admin />} />
         <Route path="/addproduct" element={<AddProduct />} />
-          <Route path="/editproduct" element={<EditProduct />} />
+          <Route path="/editproduct/:product_id" element={<EditProduct />} />
           <Route path="/deleteproduct" element={<DeleteProduct />} />
         <Route path="/searchview/:searchParam" element={<SearchView />} />
         <Route path="/editproductlookup" element={<EditProductLookUpPage />} />

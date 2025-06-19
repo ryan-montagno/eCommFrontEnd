@@ -5,22 +5,12 @@ import {useNavigate} from "react-router-dom";
 
 const EditProductLookUp = () => {
     const [product_id, setID] = useState("")
-    const [product, setProduct] = useState("")
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:8080/api/products/id?id=${product_id}`) // Adjust to match your Spring Boot API
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
-                return response.json(); // If returning JSON, use response.json()
-            })
-            .then((data) => setProduct(data))
-            .then(navigate('/editProduct'), {state: {product: product}})
-            .catch((error) => console.error("Error fetching data:", error));
+        navigate(`/editproduct/${product_id}`);
     };
 
     return (
